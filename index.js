@@ -208,7 +208,9 @@ async function main(jobTitle, location, experience) {
 const jobTitle = "Software Developer";
 
 // ------------------ RUN THE PROCESS ------------------
-
+app.get("/",(req,res)=>{
+    return res.status(200).send({message:"Company Search "})
+})
 
 app.post("/job_search", (req, res) => {
     const { jobTitle, location, experience, geminiKey } = req.body;
